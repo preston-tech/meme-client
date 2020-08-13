@@ -2,6 +2,11 @@
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
+	.navbar {
+		width: 300px;
+		display: flex;
+		justify-content: space-between;
+	}
 }
 
 .meme {

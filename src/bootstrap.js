@@ -4,9 +4,13 @@ import { useRoutes, A } from "hookrouter";
 
 import "./style/main.scss";
 import App from "./components/app";
+import MemeForm from "./components/memeForm";
 
 const routes = {
 	"/": () => <App />,
+	"/form": () => <MemeForm />,
+	"/form/:id": ({ id }) => <MemeForm id={id} />,
+	
 };
 
 function Main() {
@@ -14,6 +18,7 @@ function Main() {
 		<div>
 			<div className="navbar">
 				<A href="/">Home</A>
+				<A href="/form">Form</A>
 			</div>
 			{useRoutes(routes)}
 		</div>

@@ -1,6 +1,7 @@
 import React from "react";
 
-export default function Meme({ text, favorite, image }) {
+export default function Meme(props, deleteMeme, editMeme) {
+	const {id, text, favorite, image} = props
 	return (
 		<div className="meme">
 			<div className="img-wrapper">
@@ -16,8 +17,8 @@ export default function Meme({ text, favorite, image }) {
 				/>
 			) : null}
 
-			<button>Delete</button>
-			<button>Edit</button>
+			<button onClick={() => deleteMeme(id)}>Delete</button>
+			<button onClick={() => editMeme(id)}>Edit</button>
 		</div>
 	);
 }
